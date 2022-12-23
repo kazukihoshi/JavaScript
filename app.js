@@ -1,8 +1,19 @@
-let i;
-let num = 0;
 
-for(i= 1; i < 11; i++){
-  num = num + i;
+let user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください。');
+ 
+alert('あなたの選んだては' + user_hand  + 'です。');
+
+
+function getJShand(){
+    let js_hand_num = Math.floor( Math.random() * 3);
+    
+    if(js_hand_num == 0){
+      js_hand = "グー";
+    } else if(js_hand_num == 1){
+      js_hand = "チョキ";
+    } else if(js_hand_num == 2){
+      js_hand = "パー";
+    }
+    
+    return js_hand;
 }
-
-alert('1から10までを足し算した結果は' + num + 'です');
